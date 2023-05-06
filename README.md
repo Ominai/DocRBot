@@ -3,12 +3,14 @@ This is a very specific use-case bit of code for a Discord Bot that reads a Goog
 You will need to set up a few things to get the bot working correctly:
 
 Python:
- ---Checking for Python:
+
+---Checking for Python:
 1. Press the "Windows" key on your keyboard and type "cmd" into the search box.
 2. Click on the "Command Prompt" app to open it.
 3. Type "python" into the command prompt and press enter.
 If Python is installed, you will see the version number displayed. If Python is not installed, you will receive an error message.
- ---Installing Python:
+
+---Installing Python:
 1. Go to the Python website at https://www.python.org/downloads/ in your web browser.
 2. Click on the "Download" button for the latest version of Python.
 3. Choose the Windows installer for your system. If you are unsure, check the "System type" information in the System Properties window (accessible by right-clicking on "This PC" or "My Computer" and selecting "Properties").
