@@ -1,3 +1,5 @@
+This is a very specific use-case bit of code for a Discord Bot that reads a Google Doc link you have access to that holds Discord Formatted Messages, then posts those messages back into Discord post-by-post.  
+
 You will need to set up a few things to get the bot working correctly:
 
 Python:
