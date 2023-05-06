@@ -32,15 +32,16 @@ def docReader(file_id):
 
 # Paragraph Formatter
 def splitter(content, usernames):
-    timestamp = r'(\d{1,2}/\d{1,2}/\d{2,4} \d{1,2}:\d{2} (?:AM|PM))'  
+    timestamp = r'(\d{1,2}/\d{1,2}/\d{2,4}) (\d{1,2}:\d{2} (?:AM|PM))'  
     paragraphs = re.split(r'\n\s*\n', content)
     chunks = []
 
     for paragraph in paragraphs:
-        paragraph = re.sub(timestamp, lambda m: m.group(0), paragraph)
-
         for username in usernames:
             paragraph = paragraph.replace("\n" + username, f"\n{username}")
+
+        # Split timestamp into date and time components
+        paragraph = re.sub(timestamp, r'\1 \2', paragraph)
 
         chunks.append(paragraph)
 
