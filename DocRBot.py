@@ -17,7 +17,7 @@ intents.members = False
 intents.voice_states = False
 intents.presences = False
 intents.guild_messages = True
-intents.guild_message_reactions = True
+intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents) # Can Change Prefix Here
 
@@ -56,12 +56,12 @@ async def doc(ctx, file_url):
         return
 
     file_id = file_id_match.group(1)
-    content = get_google_doc_content(file_id)
+    content = docReader(file_id)
 
     usernames = ["USERNAME", "USERNAME"]  # <------ Add Usernames Here
 
     if content:
-        chunks = split_by_paragraph_and_usernames(content, usernames)
+        chunks = splitter(content, usernames)
         for chunk in chunks:
             await ctx.send(chunk)
     else:
